@@ -1,0 +1,137 @@
+@charset 'utf-8';
+
+/* CSS reset */
+html {
+	color: #333;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei';
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+button,
+textarea,
+p,
+i,
+em,
+b,
+th,
+td,
+strong {
+	padding: 0;
+	margin: 0;
+	font-family: 'Microsoft Yahei';
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img {
+	border: 0;
+}
+input,button {
+	outline: none;
+	border: none;
+}
+button {
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+i,
+em {
+	font-style: normal;
+}
+
+li {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+* {
+	box-sizing: border-box;
+}
+/* common */
+
+.clearfix:after {
+	content: "\200B";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.no-select {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.main {
+	position: relative;
+	margin: 0 auto;
+	width: 1180px;
+}
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.w100 {
+	width: 100%;
+	min-width: 1180px;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.mr0 {
+	margin-right: 0 !important;
+}

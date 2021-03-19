@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.VisitLogMapper">
+
+
+    <!--添加浏览记录 -->
+    <insert id="addVisitLog" parameterType="map">
+		insert into z_visit_log(visit_ip,equipment,create_time)
+		values(#{visitIp},#{equipment},sysdate())
+    </insert>
+
+</mapper>

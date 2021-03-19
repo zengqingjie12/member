@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.PillowTalkMapper">
+     <resultMap id="pillowTalkMap" type="com.example.demo.model.PillowTalk">
+		<id property="talkId" column="talk_id" />
+		<result property="talkContent" column="talk_content" />
+		<result property="talkIp" column="talk_ip" />
+		<result property="createTime" column="create_time" />
+		<result property="valid" column="valid" />
+	</resultMap>
+
+	<!--获取留言列表 -->
+     <select id="getPillowTalkList" parameterType="String" resultMap="pillowTalkMap">
+        SELECT * FROM z_pillow_talk
+        where valid=1
+        <if test="beginTime != null and beginTime != ''">
+            AND date_format(create_time,'%Y-%m-%d')&gt;=#{beginTime}
+        </if>
+        <if test="endTime != null and endTime != ''">
+            AND date_format(create_time,'%Y-%m-%d')&lt;=#{endTime}
+        </if>
+        order by create_time desc limit #{offset},#{pageSize}
+    </select>
+
+    <!--获取留言列表条数 -->
+     <select id="getPillowTalkListCount" parameterType="String" resultType="integer">
+        SELECT count(*) countNum FROM z_pillow_talk
+        where valid=1
+        <if test="beginTime != null and beginTime != ''">
+            AND date_format(create_time,'%Y-%m-%d')&gt;=#{beginTime}
+        </if>
+        <if test="endTime != null and endTime != ''">
+            AND date_format(create_time,'%Y-%m-%d')&lt;=#{endTime}
+        </if>
+    </select>
+
+    <!--添加留言 -->
+    <insert id="addPillowTalk" parameterType="map">
+		insert into z_pillow_talk(talk_content,talk_ip,create_time,valid)
+		values(#{talkContent},#{talkIp},sysdate(),1)
+    </insert>
+
+     <!--删除留言 -->
+     <update id="deletePillowTalk" parameterType="map">
+     	UPDATE z_pillow_talk SET
+     	   valid = 0
+     	 WHERE talk_id=#{talkId}
+     </update>
+
+</mapper>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吹泡泡の萝卜</title>
+    <meta name="keyword" content=""/>
+    <meta name="description" content=""/>
+    <!--    <input type="hidden" id="ctxPath" value="https://ky-vote.1633.com">-->
+    <!--    <input type="hidden" id="domain1633" value="1633.com">-->
+    <!--浏览器小图标-->
+    <link type="image/x-icon" rel="shortcut icon" href="/static/favicon.ico">
+    <!-- 全局css -->
+    <link rel="stylesheet" href="/static/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/static/css/admin.css" media="all">
+    <link rel="stylesheet" href="/static/css/myVlog.css" media="all">
+    <!-- 全局js -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/static/js/jquery-2.1.4.min.js"></script>
+    <script src="/static/layui/layui.js"></script>
+
+
+    <link href="/static/css/base.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="cyp-wrap w100">
+<div class="banner"></div>
+<div class="bg-main">
+    <div class="main">
+        <div class="search">
+            <input type="text" id="talkContent" placeholder="和萝卜说句悄悄话吧~">
+            <button type="button" id="addPillowTalk" onclick="addPillowTalk()">
+                <i></i>
+            </button>
+        </div>
+        <div class="con-main" id="dataId" data-themeId="1">
+            <section class="item-a">
+                <p> &nbsp;</p>
+                <p>书上说天下没有不散的宴席 但你别怕 </p>
+                <p style="margin-left: 5%">书上还说了 人生何处不相逢 </p>
+                <p style="margin-left: 10%">所以生活有望穿秋水的等待</p>
+                <p style="margin-left: 15%">也会有意想不到的惊喜</p>
+                <ul>
+                    <li style="margin-left: 30%"><strong>背包🎒 相机📷 目的地🚶</strong></li>
+                    <li style="text-align: center"><strong>下一站 不告诉你</strong></li>
+
+                </ul>
+            </section>
+            <section class="video-list">
+                <ul class="clearfix" id="video-list">
+
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy"
+                                     src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E7%BE%8A%E5%92%A9%E5%92%A9.png"
+                                     alt="羊咩咩">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E7%BE%8A%E5%92%A9%E5%92%A9.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《呼叫羊咩咩》</h2>
+                        
+                    </li>
+
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy"
+                                     src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E5%A4%8F%E5%A4%A9%E7%9A%84%E9%A3%8E.png"
+                                     alt="夏天的风">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E5%A4%8F%E5%A4%A9%E7%9A%84%E9%A3%8E.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《夏天的风》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy"
+                                     src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E5%A4%A7%E7%94%B0%E5%90%8E%E7%94%9F%E4%BB%94.png"
+                                     alt="大田後生仔">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E5%A4%A7%E7%94%B0%E5%90%8E%E7%94%9F%E4%BB%94.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《大田後生仔》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy"
+                                     src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E8%96%9B%E5%B2%AD%E5%B1%B1.png"
+                                     alt="最天使">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E8%96%9B%E5%B2%AD%E5%B1%B1.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《最天使》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy"
+                                     src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E5%A4%8F%E5%A4%A9%E7%9A%84%E9%A3%8E-1.png"
+                                     alt="夏天的风-1">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E5%A4%8F%E5%A4%A9%E7%9A%84%E9%A3%8E-1.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《小白菊》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy"
+                                     src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E9%9B%86%E7%BE%8E%E5%AD%A6%E6%9D%91.png"
+                                     alt="集美学村">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E9%9B%86%E7%BE%8E%E5%AD%A6%E6%9D%91.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《集美学村》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy"
+                                     src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E9%BC%93%E6%B5%AA%E5%B1%BF.png"
+                                     alt="鼓浪屿">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E9%BC%93%E6%B5%AA%E5%B1%BF.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《鼓浪屿》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E6%B2%99%E5%9D%A1%E5%B0%BE.png"
+                                     alt="沙坡尾">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E6%B2%99%E5%9D%A1%E5%B0%BE.MP4"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《沙坡尾》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E5%BD%93%E7%9C%9F.png"
+                                     alt="中华城">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E5%BD%93%E7%9C%9F.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《中华城》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E5%93%8D%E6%8C%87%E6%98%9F%E7%A9%BA.png"
+                                     alt="响指星空">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E5%93%8D%E6%8C%87%E6%98%9F%E7%A9%BA.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《响指星空》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E5%A0%95%E8%90%BD%E6%98%9F%E7%A9%BA.png"
+                                     alt="">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted="堕落星空"
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E5%A0%95%E8%90%BD%E6%98%9F%E7%A9%BA.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《堕落星空》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E8%8A%92%E7%A7%8D.png"
+                                     alt="芒种">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E8%8A%92%E7%A7%8D.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《芒种》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E6%A8%B1%E8%8A%B1%E8%8D%89.png"
+                                     alt="樱花草">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E6%A8%B1%E8%8A%B1%E8%8D%89.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《樱花草》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E6%B5%B7%E6%B4%8B%E9%A6%86.png"
+                                     alt="海底世界">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E6%B5%B7%E6%B4%8B%E9%A6%86.MP4"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《海底世界》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E6%AC%A7%E7%BD%97%E6%8B%89.png"
+                                     alt="清晨">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E6%AC%A7%E7%BD%97%E6%8B%89.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《清晨》</h2>
+
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E9%93%81%E8%BD%A8-%E5%99%A2%E8%80%B6.png"
+                                     alt="铁轨-噢耶">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E9%93%81%E8%BD%A8-%E5%99%A2%E8%80%B6.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《噢耶》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E9%93%81%E8%BD%A8-%E6%88%91%E7%9C%8B%E8%BF%87%E6%98%A5%E6%97%A5%E5%A4%8F%E9%A3%8E.png"
+                                     alt="春日夏风">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E9%93%81%E8%BD%A8-%E6%88%91%E7%9C%8B%E8%BF%87%E6%98%A5%E6%97%A5%E5%A4%8F%E9%A3%8E.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《春日夏风》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E9%93%81%E8%BD%A8-%E5%B9%B4%E5%A4%8D%E4%B8%80%E5%B9%B4.png"
+                                     alt="春光不必趁早">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E9%93%81%E8%BD%A8-%E5%B9%B4%E5%A4%8D%E4%B8%80%E5%B9%B4.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《春光不必趁早》</h2>
+                        
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E6%99%B4%E5%A4%A9.png"
+                                     alt="晴天">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E6%99%B4%E5%A4%A9.MP4"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《晴天》</h2>
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E7%96%AF%E7%8B%82%E5%8A%A8%E7%89%A9%E5%9F%8E.png"
+                                     alt="">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E7%96%AF%E7%8B%82%E5%8A%A8%E7%89%A9%E5%9F%8E.MP4"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《疯狂动物城》</h2>
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E5%96%B5%E9%97%B4%E5%BC%A5%E7%94%9F.png"
+                                     alt="喵间弥生">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E5%96%B5%E9%97%B4%E5%BC%A5%E7%94%9F%20.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《喵间弥生》</h2>
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E6%97%A5%E8%90%BD%E4%B8%9C%E5%B1%B1.png"
+                                     alt="日落东山">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E6%97%A5%E8%90%BD%E4%B8%9C%E5%B1%B1.MP4"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《日落东山》</h2>
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%A4%96.png"
+                                     alt="">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%A4%96.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《天空之外》</h2>
+
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E5%91%93%E8%AF%AD.png"
+                                     alt="呓语">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E5%91%93%E8%AF%AD.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《呓语》</h2>
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E9%B2%B8%E8%90%BD.png"
+                                     alt="鲸落">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E9%B2%B8%E8%90%BD.MP4"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《鲸落》</h2>
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E6%99%9A%E5%AE%89.png"
+                                     alt="晚安">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E6%99%9A%E5%AE%89.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《晚安》</h2>
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E7%BA%A2%E8%89%B2%E9%AB%98%E8%B7%9F%E9%9E%8B.png"
+                                     alt="红色高跟鞋">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E7%BA%A2%E8%89%B2%E9%AB%98%E8%B7%9F%E9%9E%8B.MP4"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《红色高跟鞋》</h2>
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E9%98%BF%E7%BD%97%E6%B5%B7.png"
+                                     alt="阿罗海">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E9%98%BF%E7%BD%97%E6%B5%B7.MP4"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《阿罗海》</h2>
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E8%BE%9E%C2%B7%E4%B9%9D%E9%97%A8%E5%9B%9E%E5%BF%86.png"
+                                     alt="辞·九门回忆">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E8%BE%9E%C2%B7%E4%B9%9D%E9%97%A8%E5%9B%9E%E5%BF%86.MP4"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《辞·九门回忆》</h2>
+                    </li>
+                    <li>
+                        <div class="video-box">
+                            <div class="cover">
+                                <img class="lazy" src="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog-img/%E6%88%91%E7%9A%84%E4%BA%BA%E9%97%B4.png"
+                                     alt="我的人间">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class='loading'></div>
+                            <video muted=""
+                                   data-original="https://zengqingjie.oss-cn-hangzhou.aliyuncs.com/vlog/%E6%88%91%E7%9A%84%E4%BA%BA%E9%97%B4.MOV"
+                                   loop="loop" width="100%"></video>
+                        </div>
+                        <h2>《我的人间》</h2>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section class="util">
+            <a href="https://zengqingjie.cn" style="color: #FFFFFF"><i class="layui-icon layui-icon-home"
+                                                style="font-size: 22px;color: #FFFFFF"></i>吹泡泡の萝卜</a>
+        </section>
+    </div>
+</div>
+<!-- Copyright -->
+<div class="copyright" style="color: #FFFFFF">
+    <p style="color: #FFFFFF">Copyright &copy; 2020 <a href="https://zengqingjie.cn" target="_blank" title="吹泡泡の萝卜"
+                                                       style="color: #FFFFFF">吹泡泡の萝卜</a> 版权所有 <a
+            href="http://www.beian.miit.gov.cn/" target="_blank" title="闽ICP备20002242号-1" style="color: #FFFFFF">闽ICP备20002242号-1</a>
+    </p>
+</div>
+
+<div class="video-pop">
+    <i class="close-video"></i>
+    <div class="video-main">
+        <video loop controls autoplay style="object-fit: fill;">
+
+        </video>
+    </div>
+</div>
+
+<script src="/static/js/jquery-2.1.4.min.js"></script>
+<script src="/static/js/jquery.lazyload.min.js"></script>
+<script src="/static/js/myVlog.js"></script>
+
+</body>
+</html>
